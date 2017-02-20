@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "name": "Cats",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get random cat pic",
+          "link": "cats/get_random_cat_pic.json",
+          "groups": "all",
+          "route": "api/v1/cats/random",
+          "method": "get"
+        },
+        {
+          "description": "Post a cat picture",
+          "link": "cats/post_a_cat_picture.json",
+          "groups": "all",
+          "route": "/api/v1/cats",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}

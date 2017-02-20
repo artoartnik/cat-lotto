@@ -1,0 +1,67 @@
+Post a cat picture
+------------------
+
+Parameters:
+  * name - Cat name
+  * picture - Cat picture
+
+Request:
+  POST /api/v1/cats
+  Content-Type: multipart/form-data; boundary=----------XnJLe9ZIbbGUYtzPQJ16u1
+  Cookie: 
+  Host: example.org
+
+  ------------XnJLe9ZIbbGUYtzPQJ16u1
+  Content-Disposition: form-data; name="cat[name]"
+  
+  Opomuc
+  ------------XnJLe9ZIbbGUYtzPQJ16u1
+  Content-Disposition: form-data; name="cat[picture]"; filename="cat.jpg"
+  Content-Type: image/jpeg
+  Content-Length: 210054
+  
+  [uploaded data]
+  ------------XnJLe9ZIbbGUYtzPQJ16u1--
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 85
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"d9f59a9b7de2d4b7aa3d77e5e057bd18"
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: 084c909d-9170-4cb7-8738-3128a84a35d1
+  X-Runtime: 0.068382
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "name": "Opomuc",
+    "picture_url": "http://localhost:3000/uploads/cat/picture/1/cat.jpg"
+  }
+
+
+Get random cat pic
+------------------
+
+Request:
+  GET api/v1/cats/random
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 85
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"d9f59a9b7de2d4b7aa3d77e5e057bd18"
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: d4a05faf-7462-45fc-af1f-209d1d9fec67
+  X-Runtime: 0.003324
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "name": "Opomuc",
+    "picture_url": "http://localhost:3000/uploads/cat/picture/1/cat.jpg"
+  }
